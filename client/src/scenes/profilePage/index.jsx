@@ -1,4 +1,5 @@
 import { Box, useMediaQuery } from "@mui/material";
+import WidgetWrapper from "components/WidgetWrapper";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
@@ -30,7 +31,7 @@ const ProfilePage = () => {
     if (!user) return null;
 
     return (
-        <Box>
+        <WidgetWrapper>
             <Navbar />
             <Box
                 width="100%"
@@ -39,21 +40,23 @@ const ProfilePage = () => {
                 gap="2rem"
                 justifyContent="center"
             >
-                <Box flexBasis={isNonMobileScreens ? "26%" : undefined}>
+                <Box flexBasis={isNonMobileScreens ? "50%" : undefined}>
                     <UserWidget userId={userId} picturePath={user.picturePath} />
                     <Box m="2rem 0" />
                     <FriendListWidget userId={userId} />
-                </Box>
-                <Box
-                    flexBasis={isNonMobileScreens ? "42%" : undefined}
-                    mt={isNonMobileScreens ? undefined : "2rem"}
-                >
-                    <MyPostWidget picturePath={user.picturePath} />
                     <Box m="2rem 0" />
-                    <PostsWidget userId={userId} isProfile />
+                    <Box
+                        flexBasis={isNonMobileScreens ? "42%" : undefined}
+                        mt={isNonMobileScreens ? undefined : "2rem"}
+                    >
+                        <MyPostWidget picturePath={user.picturePath} />
+                        <Box m="2rem 0" />
+                        <PostsWidget userId={userId} isProfile />
+                    </Box>
                 </Box>
+
             </Box>
-        </Box>
+        </WidgetWrapper>
     );
 };
 

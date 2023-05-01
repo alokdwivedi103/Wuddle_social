@@ -83,11 +83,12 @@ const UserWidget = ({ userId, picturePath }) => {
             {/* SECOND ROW */}
             <Box p="1rem 0">
                 <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
-                    <Link to={`https://www.google.com/maps/place/${location}`}><LocationOnOutlined fontSize="large" sx={{ color: main }} /></Link>
+                    <Link to={`https://www.google.com/maps/place/${location}`} target="_blank"><LocationOnOutlined fontSize="large" sx={{ color: main }} /></Link>
                     <Typography color={medium}>{location}</Typography>
                 </Box>
                 <Box display="flex" alignItems="center" gap="1rem">
-                    <WorkOutlineOutlined fontSize="large" sx={{ color: main }} />
+                    <Link to={`https://www.google.com/search?q=${occupation}`} target="_blank">
+                        <WorkOutlineOutlined fontSize="large" sx={{ color: main }} /></Link>
                     <Typography color={medium}>{occupation}</Typography>
                 </Box>
             </Box>

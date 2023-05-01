@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AdbSharpIcon from '@mui/icons-material/AdbSharp';
 import {
     Box,
     IconButton,
@@ -55,7 +56,11 @@ const Navbar = () => {
                     }}
                 >
                     Wuddle
+                    <AdbSharpIcon sx={{ fontSize: "25px" }} />
                 </Typography>
+
+
+
                 {isNonMobileScreeens && (
                     <FlexBetween backgroundColor={neutralLight} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
                         <InputBase placeholder="Search.." />
