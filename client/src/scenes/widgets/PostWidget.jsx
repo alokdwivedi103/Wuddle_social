@@ -62,7 +62,7 @@ const PostWidget = ({
                 {description}
             </Typography>
             {picturePath && (
-                <Link to={`http://localhost:3001/assets/${picturePath}`} target="_blank">
+                <Link to={`https://wuddle-social-backend.onrender.com/assets/${picturePath}`} target="_blank">
                     <img
                         width="100%"
                         height="auto"
