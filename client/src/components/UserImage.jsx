@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const UserImage = ({ image, size = "60px" }) => {
     return (
         <Box width={size} height={size}>
-            <Link to={`http://localhost:3001/assets/${image}`} target="_blank">
+            <Link to={`https://wuddle-social-backend.onrender.com/assets/${image}`} target="_blank">
                 <img
                     style={{ objectFit: "cover", borderRadius: "50%" }}
                     width={size}
