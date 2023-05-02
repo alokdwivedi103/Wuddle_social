@@ -77,7 +77,7 @@ const Form = () => {
     };
     const login = async (values, onSubmitProps) => {
         const loggedInResponse = await fetch(
-            "http://localhost:3001/auth/login",
+            "https://wuddle-social-backend.onrender.com/auth/login",
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
