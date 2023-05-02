@@ -56,6 +56,9 @@ app.use("/posts", postRoutes);
 
 /*Mongoose setup*/
 const PORT = process.env.PORT || 6001;
+app.get("/", (req, res) => {
+    res.send("Server Running! Do Visit our frontend");
+});
 mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
