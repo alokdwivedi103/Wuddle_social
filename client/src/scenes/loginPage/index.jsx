@@ -1,14 +1,14 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material";
 import AdbSharpIcon from '@mui/icons-material/AdbSharp';
-import FlexBetween from "components/FlexBetween";
-import { Link } from "react-router-dom";
+// import FlexBetween from "components/FlexBetween";
+// import { Link } from "react-router-dom";
 import Form from "./Form";
 
 const LoginPage = () => {
     const theme = useTheme();
     const { palette } = useTheme();
-    const main = palette.neutral.main;
-    const medium = palette.neutral.medium;
+//     const main = palette.neutral.main;
+//     const medium = palette.neutral.medium;
     const isNonMobileScreeens = useMediaQuery("(min-width:1000px)")
     return (
         <Box>
